@@ -1,0 +1,16 @@
+$(function () {
+    $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
+    $(window).resize(function () {
+        $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
+    });
+
+    //Ãªº¿Ã¢ »ó´Ü
+    $(".wc-header > span").add(
+        "<span class='chatTitle'></span>" +
+        "<span class='a'>TaihoBot</span>" +
+        "<span class='b'>taiho ´Ô°ú ´ëÈ­</span>" +
+        "<button class='btnMin'></button>" +
+        "<button class='btnLayer btnLayerFull'></button>" +
+        "<button class='btnClose'></button>").appendTo(".wc-header");
+
+});
