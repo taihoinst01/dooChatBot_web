@@ -7002,6 +7002,7 @@
                     } else e.adaptiveCardContainer.onCardAction("string" == typeof t.data ? "imBack" : "postBack", t.data)
             }
         };
+        
         var p = function(t) {
             function e(e) {
                 var n = t.call(this, e) || this;
@@ -7065,9 +7066,16 @@
                 if (msgMinutes < 10) {
                     tempMinutes = "0" + tempMinutes.toString();
                 }
-                var writeTime = new Date().getHours() + ":" + tempMinutes;
+                var getHour = new Date().getHours();
+                var ampm = '오전';
+                if (getHour > 12) {
+                    getHour = getHour - 12
+                    ampm = '오후';
+                }
+                var writeTime = ampm + " " + getHour + ":" + tempMinutes;
                 var timeDiv = "";
                 timeDiv = s.createElement("p", { className: "timeStampBot" }, writeTime);
+
                 return t = n ? s.createElement("div", null, s.createElement("svg", {
                     className: "error-icon",
                     viewBox: "0 0 15 12.01"
@@ -7079,13 +7087,13 @@
                     className: "non-adaptive-content"
                 }, this.props.children) : null, s.createElement("div", {
                     className: c.classList("wc-card", "wc-adaptive-card", this.props.className, n && "error"),
-                    ref: function(t) {
+                    ref: function (t) {
                         return e.div = t
                     },
-                    onClick: function(t) {
+                    onClick: function (t) {
                         return e.onClick(t)
                     }
-                }, t)
+                }, t, timeDiv)
             }, e.prototype.componentDidUpdate = function() {
                 this.props.onImageLoad && this.props.onImageLoad()
             }, e
@@ -7276,7 +7284,13 @@
                 if (msgMinutes < 10) {
                     tempMinutes = "0" + tempMinutes.toString();
                 }
-                var writeTime = new Date().getHours() + ":" + tempMinutes;
+                var getHour = new Date().getHours();
+                var ampm = '오전';
+                if (getHour > 12) {
+                    getHour = getHour-12
+                    ampm = '오후';
+                }
+                var writeTime = ampm + " " + getHour + ":" + tempMinutes;
                 var timeDiv = "";
                 timeDiv = o.createElement("p", { className: "timeStampUser" }, writeTime);
                 return o.createElement("span", {
@@ -13288,7 +13302,8 @@
                 }), e
             }(v);
         e.ActionSet = U;
-        var q = function(t) {
+        
+        var q = function (t) {
             function e() {
                 var e = null !== t && t.apply(this, arguments) || this;
                 return e._items = [], e

@@ -32,9 +32,8 @@ if (isMobile()) {   //모바일 환경
 		location.href = "index_m.html";
 	});
 } else {    // 웹 환경
-	$(document).on('click', '#botChatBtn', function () {
+    $(document).on('click', '#botChatBtn', function () {
 		$('.wc-chatview-panel').css('bottom', 0).show();
 		$('.bot-wrap').show();
-		$('.btnMin').click();
 	});
 }

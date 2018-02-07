@@ -141,7 +141,6 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0;
     border: 0px;
     z-index: 99;
 }
