@@ -28,17 +28,10 @@
 .timeStampUser {font-size: 12px;color: #868a8f;line-height: 15px;text-align: right;padding-top:3px !important}
 .ac-container{padding:6px !important; border-radius:5px}
 .wc-carousel-item{background-color:#f1f3f6}
+.ac-image > img {cursor:pointer}
 
 /* chat input */
-.chatFormHamburger {
-    background: url("../image/chatbotStyle/btn_menu.png") no-repeat;
-    width: 21px;
-    height: 17px;
-    display: inline-block;
-    position: absolute;
-    top: 17px;
-    left: 14px
-}
+.chatFormHamburger {background: url("../image/chatbotStyle/btn_menu.png") no-repeat;width: 21px;height: 17px;display: inline-block;position: absolute;top: 17px;left: 14px}
 .chatFormHamburger:hover{background: url("../image/chatbotStyle/btn_menu_hover.png") no-repeat;width:21px;height:17px;display: inline-block;position: absolute;top:17px;left:14px;cursor:pointer}
 .chatFormFile{background: url("../image/chatbotStyle/attach.png") no-repeat;width:19px;height:17px;display: inline-block;position: absolute;top:17px;left:390px}
 .chatFormEmoticon{background: url("../image/chatbotStyle/emo.png") no-repeat;width:19px;height:19px;display: inline-block;position: absolute;top:17px;right:60px;cursor:pointer}
@@ -57,3 +50,7 @@
 .chatFooterIcon4:hover{background: url("../image/chatbotStyle/f_btn_04_hover.png") no-repeat;  width:42px;height:42px;display: inline-block;bottom:21px;right:165px;position: absolute;cursor:pointer}
 .chatFooterIcon5{background: url("../image/chatbotStyle/f_btn_05.png") no-repeat;  width:42px;height:42px;display: inline-block;bottom:21px;right:15px;position: absolute;}
 .chatFooterIcon5:hover{background: url("../image/chatbotStyle/f_btn_05_hover.png") no-repeat;  width:42px;height:42px;display: inline-block;bottom:21px;right:15px;position: absolute;cursor:pointer}
+
+/* popup Area */
+.popupArea{opacity:0;position: absolute;display:none;background-color:#000;z-index:999;top:27%;left:50%;transform:translateX(-50%) translateY(-25%)}
+.popBody{cursor:pointer}

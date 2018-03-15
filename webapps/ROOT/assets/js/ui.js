@@ -4,6 +4,14 @@ $(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     });
 
+    //팝업창 생성 (img)
+    $("#bot > div").add(
+        "<div class='img-wrapper popupArea'>" +
+        "<div class='popBody'>" +
+        "<img src='' class='popImage'>" +
+        "</div>" +
+        "</div>").appendTo("#bot");
+
     //챗봇창 상단
     $(".wc-header > span").add(
         "<span class='chatTitle'></span>" +
@@ -58,4 +66,20 @@ $(function () {
         }
     });
 
+    //챗봇 팝업 동작 (img)
+    //img on
+    $(document).on('click', '.ac-image > img', function () {
+        $('#wrapper').css({ 'opacity': '0.8', 'background-color': '#151515' });
+        $('.botStartBtn').css({ 'opacity': '0.3', 'pointer-events': 'none' });
+        $('.wc-chatview-panel').css({ 'opacity': '0.3', 'pointer-events': 'none' });
+        $('.img-wrapper').css({ "opacity": "1", "display": "block" });
+        $('.popBody > img').attr('src', $(this).attr('src'));
+    });
+    //img off
+    $('.popBody').click(function () {
+        $('#wrapper').css({ 'opacity': '', 'background-color': '' });
+        $('.botStartBtn').css({ 'opacity': '', 'pointer-events': '' });
+        $('.wc-chatview-panel').css({ 'opacity': '', 'pointer-events': '' });
+        $('.img-wrapper').css({"opacity": "0", "display": "none" });
+    });
 });
