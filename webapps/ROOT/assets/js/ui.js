@@ -1,5 +1,5 @@
 $(function () {
-    $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
+    $('#wrapper').css({ 'height': $(document).height() + 'px' });
     $(window).resize(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     });
@@ -44,7 +44,7 @@ $(function () {
         $('.bot-wrap').hide().removeClass("chatOn").addClass("chatOff");
     });
     $('.btnMin').click(function () {
-        $('.wc-chatview-panel').css({ "overflow": "hidden" })
+        $('.wc-chatview-panel').css({ "overflow": "hidden" });
         $('.wc-chatview-panel').animate({ "height": "32px" }, "fast");
         $('.wc-console, wc-message-pane').hide();
         $('.btnMin').css({ 'display': 'none' });
@@ -53,14 +53,14 @@ $(function () {
     });
     $(document).on('click', '.wc-header [class*=btnLayer]', function () {
         if ($(this).hasClass('btnLayerMid')) {
-            $('.wc-chatview-panel').css({ "overflow": "visible" })
+            $('.wc-chatview-panel').css({ "overflow": "visible" });
             $('.wc-chatview-panel').animate({ "height": "867px" }, "fast");
             $('.wc-console, wc-message-pane').show();
             $('.btnLayer').removeClass('btnLayerMid').addClass('btnLayerFull');
             $('.btnLayer > button').css({ 'display': 'inline-block' }).removeClass('topIcon02-1').addClass('topIcon02');
             $('.btnMin').css({ 'right': '58px', 'display':'inline-block' });
         } else {
-            $('.wc-chatview-panel').animate({ "height": ($(document).height()) + 'px' }, "fast");
+            $('.wc-chatview-panel').animate({ "height": $(document).height() + 'px' }, "fast");
             $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
             $('.btnLayer > button').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('topIcon02-1');
         }
