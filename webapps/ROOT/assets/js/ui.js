@@ -15,15 +15,15 @@ $(function () {
     //챗봇창 상단
     $(".wc-header > span").add(
         "<span class='chatTitle'></span>" +
-        "<span class='chatTitleText'><strong>TaihoBot</strong></span>" +
-        "<span class='chatTitleUser'>taiho님과 대화</span>" +
+        "<span class='chatTitleText'><strong>발주승인ROBOT</strong></span>" +
+        "<span class='chatTitleUser'>신규남님과 대화</span>" +
 
         "<span class='topIcon btnClose'><button class='topIcon03'></button></span>" +
         "<span class='topIcon btnLayer btnLayerFull'><button class='topIcon02'></button></span>" +
         "<span class='topIcon btnMin'><button class='topIcon01'></button></span>" +
 
         "<div class='chatStatus'>" +
-            "<div class='chatStatus1'><strong>TaihoBot</strong><span class='question'></span></div>" +
+            "<div class='chatStatus1'><strong>발주승인ROBOT</strong><span class='question'></span></div>" +
             "<div class='chatStatus2'>상태 알수 없음</div>" +
             "<div class='chatStatus3'><span class='iconUser1'></span>참가자2명</div>" +
             "<div class='iconUser2'></div>" +
