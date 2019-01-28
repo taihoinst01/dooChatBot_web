@@ -16,7 +16,7 @@ $(function () {
     $(".wc-header > span").add(
         "<span class='chatTitle'></span>" +
         "<span class='chatTitleText'><strong>발주승인ROBOT</strong></span>" +
-        "<span class='chatTitleUser'>신규남님과 대화</span>" +
+        "<span class='chatTitleUser'>규남님과 대화</span>" +
 
         "<span class='topIcon btnClose'><button class='topIcon03'></button></span>" +
         "<span class='topIcon btnLayer btnLayerFull'><button class='topIcon02'></button></span>" +
